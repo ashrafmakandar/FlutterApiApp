@@ -40,41 +40,41 @@ class _PrayState extends State<Pray> {
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "FAJR " + pras.data.timings.fajr,
+                          "FAJR " + pras.data.timings.fajr+":AM",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "DHUHR " + pras.data.timings.dhuhr,
+                          "DHUHR " + pras.data.timings.dhuhr+":PM",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "ASR " + pras.data.timings.asr,
+                          "ASR " + pras.data.timings.asr+":PM",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "MAGHRIB " + pras.data.timings.maghrib,
+                          "MAGHRIB " + pras.data.timings.maghrib+":PM",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
-                          "ISHA " + pras.data.timings.isha,
+                          "ISHA " + pras.data.timings.isha+":PM",
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                       Padding(
@@ -82,7 +82,7 @@ class _PrayState extends State<Pray> {
                         child: Text(
                           "DATE " + pras.data.date.readable,
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                       Padding(
@@ -90,7 +90,7 @@ class _PrayState extends State<Pray> {
                         child: Text(
                           "HIJRI " + pras.data.date.hijri.date,
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                       Padding(
@@ -98,7 +98,7 @@ class _PrayState extends State<Pray> {
                         child: Text(
                           "WEEKDAY " + pras.data.date.hijri.weekday.en,
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                       Padding(
@@ -106,7 +106,7 @@ class _PrayState extends State<Pray> {
                         child: Text(
                           "MONTH " + pras.data.date.hijri.month.en,
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                       Padding(
@@ -114,7 +114,7 @@ class _PrayState extends State<Pray> {
                         child: Text(
                           "TIMEZONE " + pras.data.meta.timezone,
                           style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.w700),
+                              color: Colors.white, fontWeight: FontWeight.w700,fontSize: 20),
                         ),
                       ),
                     ],
