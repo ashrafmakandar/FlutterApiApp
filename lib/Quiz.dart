@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:testingapp/Pray.dart';
 import 'package:testingapp/Qui.dart';
 
 void main() => runApp(Quiz());
@@ -32,27 +33,43 @@ class _QuizState extends State<Quiz> {
               return ListView.builder(
                   itemCount: rr.length,
                   itemBuilder: (context, index) {
-                    return Card(
-                      child: Padding(
-                        padding: const EdgeInsets.all(2.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: SizedBox(
-                                  child: Text(rr[index].question,style: TextStyle(
-                                    color: Colors.blue,fontStyle: FontStyle.normal,fontWeight: FontWeight.w900
-                                  ),)),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text(rr[index].correctAnswer,style: TextStyle(
-                    color: Colors.black87,fontStyle: FontStyle.normal,fontWeight: FontWeight.w500
-                    ),),
-                            )
-                          ],
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            (MaterialPageRoute(
+                                builder: (BuildContext context) => Pray())));
+                      },
+                      child: Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(2.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: SizedBox(
+                                    child: Text(
+                                  rr[index].question,
+                                  style: TextStyle(
+                                      color: Colors.blue,
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w900),
+                                )),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  rr[index].correctAnswer,
+                                  style: TextStyle(
+                                      color: Colors.black87,
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w500),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     );

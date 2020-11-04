@@ -15,7 +15,7 @@ class Districts extends StatefulWidget {
 
 class _DistrictsState extends State<Districts> {
   List<Countriesdata> da;
-
+var items,bd;
   @override
   void initState() {
     // TODO: implement initState
@@ -34,13 +34,22 @@ class _DistrictsState extends State<Districts> {
                 return ListView.builder(
                     itemCount: da.length,
                     itemBuilder: (context, index) {
+                      for(items in da[index].currency)
+                      {
 
+                      }
+                      for(bd in da[index].borders)
+                      {
+
+                      }
 
                       return InkWell(
+
                         onTap: ()=>{
                           Navigator.push(context,  MaterialPageRoute(builder: (BuildContext c)=> Tvs())
                           )},
                         child: Card(
+
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -64,7 +73,7 @@ class _DistrictsState extends State<Districts> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text(da[index].currency.toList().toString()),
+                              child: Text(items.toString()),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -84,7 +93,7 @@ class _DistrictsState extends State<Districts> {
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(8.0),
-                                child: Text(da[index].borders.toString()),
+                                child: Text(bd),
                               ),
 
 
